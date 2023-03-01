@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ProductListItem from "../ProductListItem";
 import ProductDetails from "../ProductDetails";
 import './ProductView.css'
@@ -7,7 +7,15 @@ function ProductView({ products }) {
 
   // TODO: Replace with state variable
   const [sideOpen, setSideOpen] = useState(true);
-  const [selectProduct, setSelectProduct] = useState()
+  const [selectProduct, setSelectProduct] = useState();
+
+useEffect(() => {
+  setSideOpen(true);
+}, [selectProduct]);
+
+useEffect(() => {
+  setSelectProduct();
+}, [sideOpen]);
   
   return (
     <div className="product-view">
