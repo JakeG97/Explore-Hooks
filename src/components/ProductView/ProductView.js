@@ -7,7 +7,7 @@ function ProductView({ products }) {
 
   // TODO: Replace with state variable
   const [sideOpen, setSideOpen] = useState(true);
-  const [selectProduct, setSelectProduct] = useState(true)
+  const [selectProduct, setSelectProduct] = useState()
 
   return (
     <div className="product-view">
