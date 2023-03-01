@@ -26,7 +26,7 @@ useEffect(() => {
             <ProductListItem
               key={item.id}
               product={item}
-              isSelected={selectProduct.id===item.id}
+              isSelected={selectProduct?.id===item.id}
               onClick={() => setSelectProduct(item)}
             />
           )}
