@@ -8,7 +8,7 @@ function ProductView({ products }) {
   // TODO: Replace with state variable
   const [sideOpen, setSideOpen] = useState(true);
   const [selectProduct, setSelectProduct] = useState()
-
+  
   return (
     <div className="product-view">
       <div className="product-main-area">
@@ -18,6 +18,7 @@ function ProductView({ products }) {
             <ProductListItem
               key={item.id}
               product={item}
+              isSelected={selectProduct.id===item.id}
               onClick={() => setSelectProduct(item)}
             />
           )}
